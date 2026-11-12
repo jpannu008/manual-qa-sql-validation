@@ -1,0 +1,16 @@
+Test Case ID,Module,Scenario,Preconditions,Test Steps,Expected Result,Priority,Type
+TC-001,Login,Login with valid credentials,Registered active user,"Enter valid email and password; click Login","User is authenticated and redirected to account page",High,Positive
+TC-002,Login,Login with invalid password,Registered user,"Enter valid email and incorrect password; click Login","Clear authentication error appears; user remains signed out",High,Negative
+TC-003,Login,Required field validation,Login page open,"Leave email and password blank; click Login","Required field validation appears",Medium,Negative
+TC-004,Login,Password is masked,Login page open,"Type password into password field","Password characters are masked by default",Low,Usability
+TC-005,Search,Search for existing product,Matching product exists,"Search using exact product name","Relevant matching product is displayed",High,Positive
+TC-006,Search,Search for unavailable product,Catalogue available,"Search for a term with no matching product","No-results message appears; page remains usable",Medium,Negative
+TC-007,Cart,Add product to cart,User signed in; product in stock,"Open product; click Add to cart","Cart count increases and correct product appears",High,Positive
+TC-008,Cart,Remove product from cart,Cart contains one product,"Open cart; click Remove","Product is removed and cart count is updated",High,Positive
+TC-009,Cart,Update cart quantity,Cart contains editable quantity item,"Change quantity to a valid positive integer","Quantity and subtotal update correctly",High,Positive
+TC-010,Checkout,Checkout with valid details,Cart contains in-stock product,"Enter valid shipping details; continue","Order review displays correct items, tax and total",High,Positive
+TC-011,Checkout,Missing postal code,Cart contains product,"Leave postal code blank; submit checkout","Validation appears; order is not submitted",High,Negative
+TC-012,Checkout,Prevent duplicate order submission,Checkout review page open,"Submit order once; observe result","Only one order is created for the submission",High,Regression
+TC-013,Orders,Order appears in history,Successful order exists,"Open order history","New order appears with correct status and total",High,Positive
+TC-014,Session,Expired session behavior,User session expired,"Navigate to protected account page","User is redirected to login or shown safe session-expired message",High,Security
+TC-015,Accessibility,Keyboard navigation,Application loaded,"Navigate primary controls using Tab and Enter","Interactive controls are reachable with visible focus",Medium,Accessibility
